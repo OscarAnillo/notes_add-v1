@@ -1,0 +1,22 @@
+{
+  "notes": [
+    {
+      "content": "Hello there",
+      "date": "2023-03-26T02:25:54.399Z",
+      "important": false,
+      "id": 1
+    },
+    {
+      "content": "This is how we do this",
+      "date": "2023-03-26T22:49:51.927Z",
+      "important": false,
+      "id": 2
+    },
+    {
+      "content": "Hi there",
+      "date": "2023-03-26T22:54:05.336Z",
+      "important": false,
+      "id": 3
+    }
+  ]
+}

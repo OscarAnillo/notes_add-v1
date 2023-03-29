@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.App {
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+}
+form {
+    border: 1px solid #eee;
+    width: 50%;
+    margin: 20px auto;
+    padding: 1em;
+    text-align: left;
+}
+form input {
+    margin: 1em 0;
+    padding: 1em;
+    width: 95%;
+}
+form button {
+    border: none;
+    background-color: black;
+    border-radius: 6px;
+    color: #fff;
+    letter-spacing: 3px;
+    padding: 1em 1.5em;
+    text-transform: uppercase;
+}
+.map-div {
+    margin: 0 auto;
+    text-align: left;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em;
+}
+.map-div li {
+    font-size: 1.1rem;
+}
+
+.map-div span {
+    font-size: .7rem;
+}
+
+.map-div button {
+    background-color: transparent;
+    border: none;
+    color: red;
+    cursor: pointer;
+}
