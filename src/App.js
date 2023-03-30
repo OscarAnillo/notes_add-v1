@@ -16,21 +16,37 @@ function App() {
       .catch(console.log);
   }, [setData]);
 
-  const submitHandler = (e) => {
+  const submitHandler = async (e) => {
     e.preventDefault();
     if (!newNote) {
       alert("Please a note first!");
       return;
     }
-    noteService
-      .create({
-        content: newNote,
-      })
-      .then((res) => {
-        setData(data.concat(res));
-        setNewNote("");
-      })
-      .catch(console.log);
+    // noteService
+    //   .create({
+    //     content: newNote,
+    //   })
+    //   .then((res) => {
+    //     setData(data.concat(res));
+    //     setNewNote("");
+    //   })
+    //   .catch(console.log);
+    try {
+      const response = await fetch("http://localhost:3005/api/notes", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          content: newNote,
+        }),
+      });
+      const jsonData = await response.json();
+      setData(data.concat(jsonData));
+      setNewNote("");
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   const clickHandlerDelete = (id) => {
